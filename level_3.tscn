@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://u2qkcy6ygtqk"]
+
+[ext_resource type="PackedScene" uid="uid://bcr0tl2mk34d3" path="res://scenes/room_format.tscn" id="1_ah8om"]
+[ext_resource type="Script" uid="uid://bjlhpu0y3w75w" path="res://scripts/level_3.gd" id="2_p6vls"]
+[ext_resource type="PackedScene" uid="uid://dxn5k1g7ptenl" path="res://scenes/pillar.tscn" id="3_hhfj6"]
+[ext_resource type="PackedScene" uid="uid://bow00pu52sxlb" path="res://scenes/button.tscn" id="4_wae8j"]
+[ext_resource type="Script" uid="uid://86vdtr35u3cv" path="res://pattern.gd" id="5_ha73p"]
+[ext_resource type="PackedScene" uid="uid://d0ah2ibnyotqi" path="res://scenes/ask_me.tscn" id="6_hhfj6"]
+[ext_resource type="PackedScene" uid="uid://10yigf5rrwpu" path="res://scenes/player.tscn" id="7_wae8j"]
+[ext_resource type="PackedScene" uid="uid://qas3tw0rsb8w" path="res://close_button.tscn" id="8_wae8j"]
+
+[node name="Level 3" unique_id=793464857 instance=ExtResource("1_ah8om")]
+script = ExtResource("2_p6vls")
+
+[node name="Pillar" parent="." index="1" unique_id=934663967 instance=ExtResource("3_hhfj6")]
+position = Vector2(750, 272)
+scale = Vector2(0.9, 0.9)
+
+[node name="Lever" parent="." index="2" unique_id=482579814 instance=ExtResource("4_wae8j")]
+position = Vector2(467, 518)
+
+[node name="TextEdit" type="TextEdit" parent="." index="3" unique_id=1245611953]
+offset_left = 43.0
+offset_top = 31.0
+offset_right = 149.89655
+offset_bottom = 73.59259
+scale = Vector2(4.88, 4.88)
+theme_override_colors/font_readonly_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+editable = false
+script = ExtResource("5_ha73p")
+
+[node name="ask_me" parent="." index="4" unique_id=405060066 instance=ExtResource("6_hhfj6")]
+
+[node name="Player" parent="." index="5" unique_id=2067117308 instance=ExtResource("7_wae8j")]
+position = Vector2(70, 535)
+
+[node name="Close button" parent="." index="6" unique_id=1976129343 instance=ExtResource("8_wae8j")]

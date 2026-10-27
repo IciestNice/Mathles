@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bue1yvpa5dc7e"]
+
+[ext_resource type="Texture2D" uid="uid://cpyrn1emvklst" path="res://assets/Screenshot_2026-10-11_at_16.16.42-removebg-preview.png" id="1_8ni32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22vk8"]
+size = Vector2(195, 49)
+
+[node name="ground sample" type="Node2D" unique_id=166093177]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1337009680]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=608154772]
+position = Vector2(165, -17.999992)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("1_8ni32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=905094596]
+position = Vector2(165.5, -17.5)
+shape = SubResource("RectangleShape2D_22vk8")

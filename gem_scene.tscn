@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://1b6r44dk7qro"]
+
+[ext_resource type="Script" uid="uid://dwwv74c8sh4rd" path="res://gem_scene.gd" id="1_5pl0l"]
+[ext_resource type="Texture2D" uid="uid://hp2ltyh6bbqf" path="res://assets/Screenshot 2026-05-29 at 23.11.59.png" id="2_3sh50"]
+[ext_resource type="Texture2D" uid="uid://bq81q3onqvv87" path="res://assets/image-removebg-preview.png" id="3_3sh50"]
+[ext_resource type="AudioStream" uid="uid://xc3slk4c3mr4" path="res://assets/liecio-diamond-found-190255.mp3" id="4_exya1"]
+
+[node name="Gem_scene" type="Control" unique_id=112501923]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pl0l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=768028415]
+position = Vector2(584, 322.00003)
+scale = Vector2(1.2704402, 1.1508197)
+texture = ExtResource("2_3sh50")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2142005389]
+position = Vector2(410, 305)
+texture = ExtResource("3_3sh50")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1276181686]
+layout_mode = 0
+offset_left = 667.0
+offset_right = 1102.0
+offset_bottom = 550.0
+theme_override_colors/font_readonly_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 400
+text = "0"
+placeholder_text = "
+"
+editable = false
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=1459681964]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 500.0
+offset_right = 1123.0
+offset_bottom = 659.0
+theme_override_colors/font_readonly_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 100
+text = "+1"
+editable = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1243643272]
+stream = ExtResource("4_exya1")

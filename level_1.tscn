@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://di7cenqwnk0oy"]
+
+[ext_resource type="PackedScene" uid="uid://bcr0tl2mk34d3" path="res://scenes/room_format.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://dxn5k1g7ptenl" path="res://scenes/pillar.tscn" id="2_bswci"]
+[ext_resource type="Script" uid="uid://cdfp6ngp2noc1" path="res://scenes/level_1.gd" id="2_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://dwtx5sb22mfef" path="res://assets/Screenshot 2026-10-18 at 20.51.06.png" id="4_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://bvlechorkc1lb" path="res://assets/Screenshot_2026-10-11_at_16.22.44-removebg-preview.png" id="5_15mv3"]
+[ext_resource type="Texture2D" uid="uid://t83uf6ofvrpk" path="res://assets/Screenshot_2026-10-18_at_20.55.12-removebg-preview.png" id="6_e3sih"]
+[ext_resource type="PackedScene" uid="uid://b70tv7fpu5q04" path="res://scenes/vase.tscn" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://bow00pu52sxlb" path="res://scenes/button.tscn" id="8_e3sih"]
+[ext_resource type="PackedScene" uid="uid://10yigf5rrwpu" path="res://scenes/player.tscn" id="9_2os1m"]
+[ext_resource type="PackedScene" uid="uid://d0ah2ibnyotqi" path="res://scenes/ask_me.tscn" id="10_2y5yt"]
+[ext_resource type="PackedScene" uid="uid://qas3tw0rsb8w" path="res://close_button.tscn" id="11_2os1m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y5yt"]
+size = Vector2(565.5, 83.4256)
+
+[sub_resource type="GDScript" id="GDScript_go7sj"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float):
+	pass
+	
+"
+
+[node name="Level 1" unique_id=793464857 instance=ExtResource("1_014kd")]
+script = ExtResource("2_fcfvj")
+vase_scene = ExtResource("7_pa8r4")
+
+[node name="Pillar" parent="." index="1" unique_id=934663967 instance=ExtResource("2_bswci")]
+position = Vector2(750, 272)
+scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=380970156]
+position = Vector2(219, 49)
+scale = Vector2(0.30963302, 0.11158192)
+texture = ExtResource("4_pa8r4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="3" unique_id=1154771388]
+position = Vector2(220, -59)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("5_15mv3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="4" unique_id=667928248]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="0" unique_id=1031342672]
+position = Vector2(273.25, 296.5)
+shape = SubResource("RectangleShape2D_2y5yt")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" index="1" unique_id=313090780]
+position = Vector2(272, 296)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("6_e3sih")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." index="5" unique_id=935381006]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="0" unique_id=162363984]
+position = Vector2(559.29596, 20.39902)
+rotation = -1.5728164
+shape = SubResource("RectangleShape2D_2y5yt")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" index="1" unique_id=1718041382]
+position = Vector2(568.8331, 19.877197)
+rotation = -1.5728164
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("6_e3sih")
+
+[node name="Lever" parent="." index="6" unique_id=482579814 instance=ExtResource("8_e3sih")]
+position = Vector2(469, 519)
+script = SubResource("GDScript_go7sj")
+
+[node name="Player" parent="." index="7" unique_id=2067117308 instance=ExtResource("9_2os1m")]
+position = Vector2(70, 535)
+
+[node name="ask_me" parent="." index="8" unique_id=405060066 instance=ExtResource("10_2y5yt")]
+offset_left = 10.0
+offset_top = -24.0
+offset_right = 10.0
+offset_bottom = -24.0
+
+[node name="Close button" parent="." index="9" unique_id=1976129343 instance=ExtResource("11_2os1m")]

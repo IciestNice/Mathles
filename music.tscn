@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://boockj5rag2s7"]
+
+[ext_resource type="Script" uid="uid://tmchnq5x4egj" path="res://music.gd" id="1_3h6ak"]
+[ext_resource type="AudioStream" uid="uid://cetm7wsckkaub" path="res://assets/2026.10.23_1932 (Cropped in 2026.10.23_2029).mp3" id="2_w5q55"]
+[ext_resource type="AudioStream" uid="uid://cpgxqiyapdhes" path="res://assets/2026.10.23_1741 (Cropped in 2026.10.23_1840).mp3" id="3_lr66j"]
+
+[node name="Music" type="Node2D" unique_id=859945315]
+script = ExtResource("1_3h6ak")
+
+[node name="gamemusic" type="AudioStreamPlayer" parent="." unique_id=712318653]
+stream = ExtResource("2_w5q55")
+
+[node name="tutorialmusic" type="AudioStreamPlayer" parent="." unique_id=1175136254]
+stream = ExtResource("3_lr66j")

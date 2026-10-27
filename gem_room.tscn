@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dipcpioqiu7yf"]
+
+[ext_resource type="PackedScene" uid="uid://bcr0tl2mk34d3" path="res://scenes/room_format.tscn" id="1_nxb6i"]
+[ext_resource type="PackedScene" uid="uid://dxn5k1g7ptenl" path="res://scenes/pillar.tscn" id="2_scn0u"]
+[ext_resource type="Script" uid="uid://ckdvl0scmyat8" path="res://scenes/gem.gd" id="3_o6oxh"]
+[ext_resource type="Texture2D" uid="uid://v5umdc4w4p6m" path="res://assets/Screenshot_2026-10-22_at_17.07.08-removebg-preview.png" id="4_y1rnb"]
+[ext_resource type="Texture2D" uid="uid://bq81q3onqvv87" path="res://assets/image-removebg-preview.png" id="5_v5k2f"]
+[ext_resource type="PackedScene" uid="uid://10yigf5rrwpu" path="res://scenes/player.tscn" id="6_hvhg6"]
+[ext_resource type="PackedScene" uid="uid://1b6r44dk7qro" path="res://gem_scene.tscn" id="7_y1rnb"]
+[ext_resource type="PackedScene" uid="uid://qas3tw0rsb8w" path="res://close_button.tscn" id="8_v5k2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gwol"]
+size = Vector2(189.5, 190)
+
+[node name="Gem room" unique_id=793464857 instance=ExtResource("1_nxb6i")]
+
+[node name="Pillar" parent="." index="1" unique_id=934663967 instance=ExtResource("2_scn0u")]
+position = Vector2(750, 272)
+scale = Vector2(0.9, 0.9)
+
+[node name="Area2D" type="Area2D" parent="." index="2" unique_id=1937154852]
+script = ExtResource("3_o6oxh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" index="0" unique_id=1573186660]
+position = Vector2(484, 526.25)
+scale = Vector2(0.33641976, 0.28311265)
+texture = ExtResource("4_y1rnb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D" index="1" unique_id=75231694]
+position = Vector2(478.00003, 472.5)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("5_v5k2f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="2" unique_id=2006318487]
+position = Vector2(483.25, 466.49997)
+shape = SubResource("RectangleShape2D_0gwol")
+
+[node name="Player" parent="." index="3" unique_id=2067117308 instance=ExtResource("6_hvhg6")]
+position = Vector2(70, 535)
+
+[node name="Gem_scene" parent="." index="4" unique_id=112501923 instance=ExtResource("7_y1rnb")]
+visible = false
+
+[node name="Close button" parent="." index="5" unique_id=1976129343 instance=ExtResource("8_v5k2f")]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

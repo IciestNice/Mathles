@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b70tv7fpu5q04"]
+
+[ext_resource type="Texture2D" uid="uid://bx3eb3p6cmt0f" path="res://assets/Screenshot_2026-10-18_at_21.04.50-removebg-preview.png" id="1_y28lw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tvxo7"]
+
+[node name="Vase" type="Node2D" unique_id=361525786]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1112680812]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1701477720]
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_y28lw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=652456594]
+position = Vector2(-2.0000005, 12.000001)
+rotation = 0.3484264
+scale = Vector2(3.839815, 5.130944)
+shape = SubResource("CircleShape2D_tvxo7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" unique_id=1189274156]
+position = Vector2(17, -47.000008)
+rotation = 0.3484264
+scale = Vector2(2.9869947, 1.5250373)
+shape = SubResource("CircleShape2D_tvxo7")

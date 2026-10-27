@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dxn5k1g7ptenl"]
+
+[ext_resource type="Script" uid="uid://1v6dpl5kmghq" path="res://scripts/piller.gd" id="1_tcmdu"]
+[ext_resource type="Texture2D" uid="uid://mu1gtpbskhhq" path="res://assets/Screenshot_2026-10-13_at_20.11.55-removebg-preview.png" id="2_r8rte"]
+[ext_resource type="AudioStream" uid="uid://c0nk5vlfu4hpy" path="res://assets/2026.10.23_2719 (Cropped in 2026.10.23_2754).mp3" id="3_q1crh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iutp8"]
+size = Vector2(309, 606)
+
+[node name="Pillar" type="Node2D" unique_id=934663967]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=653822051]
+script = ExtResource("1_tcmdu")
+
+[node name="pillarshape2d" type="CollisionShape2D" parent="StaticBody2D" unique_id=1314720943]
+position = Vector2(-5.5, 7)
+shape = SubResource("RectangleShape2D_iutp8")
+
+[node name="sprite4piller" type="Sprite2D" parent="StaticBody2D" unique_id=97957509]
+texture = ExtResource("2_r8rte")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1064481462]
+stream = ExtResource("3_q1crh")

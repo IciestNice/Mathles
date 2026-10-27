@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dq2w8t7ufpd74"]
+
+[ext_resource type="PackedScene" uid="uid://10yigf5rrwpu" path="res://scenes/player.tscn" id="1_0hxx3"]
+[ext_resource type="PackedScene" uid="uid://dq2w8t7ufpd74" path="res://scenes/test1mathle-shbfgr.tscn" id="1_4nrjd"]
+
+[node name="Node2D" type="Node2D" unique_id=773340884]
+
+[node name="Node2D" parent="." unique_id=166093177 instance=ExtResource("1_4nrjd")]
+position = Vector2(281, 263)
+
+[node name="Node2D2" parent="." unique_id=2018491519 instance=ExtResource("1_4nrjd")]
+position = Vector2(726, 241)
+
+[node name="Player" parent="." unique_id=2067117308 instance=ExtResource("1_0hxx3")]
+position = Vector2(559, 142)

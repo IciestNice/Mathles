@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dv7fqyyvvdpox"]
+
+[ext_resource type="PackedScene" uid="uid://c5f84ktn7y4wr" path="res://scenes/tutorial_room_1.tscn" id="1_6wwkv"]
+[ext_resource type="Texture2D" uid="uid://bvlechorkc1lb" path="res://assets/Screenshot_2026-10-11_at_16.22.44-removebg-preview.png" id="2_6wirv"]
+[ext_resource type="PackedScene" uid="uid://bue1yvpa5dc7e" path="res://scenes/ground_sample.tscn" id="2_fr6so"]
+
+[node name="Tutorial room 2" unique_id=793464857 instance=ExtResource("1_6wwkv")]
+
+[node name="RigidBody2D#original door" type="Sprite2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(872648774) index="3" unique_id=267554399]
+position = Vector2(8, 462.00003)
+scale = Vector2(0.27395204, 0.30254772)
+texture = ExtResource("2_6wirv")
+
+[node name="CollisionShape2D" parent="StaticBody2D/next area" parent_id_path=PackedInt32Array(700334011) index="0" unique_id=1242891066]
+position = Vector2(936, 187.5)
+
+[node name="new door" parent="StaticBody2D/next area" parent_id_path=PackedInt32Array(700334011) index="1" unique_id=2104600262]
+position = Vector2(935, 152.5)
+
+[node name="ground sample" parent="." index="1" unique_id=166093177 instance=ExtResource("2_fr6so")]
+position = Vector2(768, 312)
+
+[node name="ground sample2" parent="." index="2" unique_id=1327480849 instance=ExtResource("2_fr6so")]
+position = Vector2(581, 400)
+
+[node name="ground sample3" parent="." index="3" unique_id=1181865722 instance=ExtResource("2_fr6so")]
+position = Vector2(389, 490)

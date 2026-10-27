@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://boog2aup2jp63"]
+
+[ext_resource type="PackedScene" uid="uid://c5f84ktn7y4wr" path="res://scenes/tutorial_room_1.tscn" id="1_1jaox"]
+[ext_resource type="Texture2D" uid="uid://mu1gtpbskhhq" path="res://assets/Screenshot_2026-10-13_at_20.11.55-removebg-preview.png" id="2_6585v"]
+[ext_resource type="Script" uid="uid://cksapx4vq8dua" path="res://scenes/blockremove-tutorial.gd" id="2_prwb6"]
+[ext_resource type="PackedScene" uid="uid://bow00pu52sxlb" path="res://scenes/button.tscn" id="3_oa3i6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixhpq"]
+size = Vector2(259, 535)
+
+[node name="Tutorial room 3" unique_id=793464857 instance=ExtResource("1_1jaox")]
+
+[node name="pillartutorial" type="RigidBody2D" parent="." index="1" unique_id=1973276988]
+gravity_scale = 0.0
+script = ExtResource("2_prwb6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillartutorial" index="0" unique_id=827752089]
+position = Vector2(748.5, 279.5)
+shape = SubResource("RectangleShape2D_ixhpq")
+
+[node name="piller_sprite" type="Sprite2D" parent="pillartutorial" index="1" unique_id=1225688080]
+position = Vector2(747, 268)
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("2_6585v")
+
+[node name="Lever" parent="." index="2" unique_id=482579814 instance=ExtResource("3_oa3i6")]
+position = Vector2(470, 520)

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dl1w4u5vgbcnu"]
+
+[ext_resource type="Texture2D" uid="uid://jtduldmiq15j" path="res://assets/Screenshot 2026-10-16 at 22.39.03.png" id="1_3xoar"]
+[ext_resource type="Script" uid="uid://hi84o0m3twq0" path="res://scenes/title.gd" id="1_yql1r"]
+[ext_resource type="Texture2D" uid="uid://deq6syghxag1" path="res://assets/Screenshot_2026-10-16_at_22.39.32-removebg-preview.png" id="2_mom7w"]
+[ext_resource type="Texture2D" uid="uid://cxq37ivvsan6n" path="res://assets/Screenshot_2026-10-16_at_22.51.58-removebg-preview.png" id="3_7lgly"]
+[ext_resource type="Script" uid="uid://dpmx5m4j6hd06" path="res://scripts/tutroial.gd" id="4_0824t"]
+[ext_resource type="Texture2D" uid="uid://d1avgwp7ogv0a" path="res://assets/Screenshot_2026-10-16_at_22.52.10-removebg-preview.png" id="5_b3w7a"]
+[ext_resource type="Script" uid="uid://c4ij1ugx6doqw" path="res://scenes/game.gd" id="6_4rr2b"]
+
+[node name="Title" type="Control" unique_id=647830403]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yql1r")
+
+[node name="background" type="Sprite2D" parent="." unique_id=505924150]
+position = Vector2(575.00006, 323)
+scale = Vector2(0.47219324, 0.47178733)
+texture = ExtResource("1_3xoar")
+
+[node name="Title card" type="Sprite2D" parent="." unique_id=1648857375]
+position = Vector2(573, 216.99998)
+scale = Vector2(1.13, 1.13)
+texture = ExtResource("2_mom7w")
+
+[node name="Tutorial" type="Button" parent="." unique_id=560284352]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 415.0
+offset_right = 893.0
+offset_bottom = 799.0
+scale = Vector2(0.5199988, 0.52000123)
+action_mode = 0
+icon = ExtResource("3_7lgly")
+script = ExtResource("4_0824t")
+
+[node name="Game" type="Button" parent="." unique_id=1479504858]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 412.0
+offset_right = 1305.0
+offset_bottom = 796.0
+scale = Vector2(0.5199988, 0.52000123)
+action_mode = 0
+icon = ExtResource("5_b3w7a")
+script = ExtResource("6_4rr2b")

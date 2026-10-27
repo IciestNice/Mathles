@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dkkfps3odge1k"]
+
+[ext_resource type="Script" uid="uid://d0worf4306hie" path="res://scenes/tutorial.gd" id="1_cq4me"]
+[ext_resource type="PackedScene" uid="uid://c5f84ktn7y4wr" path="res://scenes/tutorial_room_1.tscn" id="2_6yjpi"]
+[ext_resource type="PackedScene" uid="uid://dv7fqyyvvdpox" path="res://scenes/tutorial_room_2.tscn" id="3_gbqnl"]
+[ext_resource type="PackedScene" uid="uid://boog2aup2jp63" path="res://scenes/tutorial_room_3.tscn" id="4_ckvwl"]
+
+[node name="Tutorial" type="Node2D" unique_id=585923909]
+script = ExtResource("1_cq4me")
+
+[node name="Tutorial room 1" parent="." unique_id=793464857 instance=ExtResource("2_6yjpi")]
+
+[node name="Tutorial room 2" parent="." unique_id=90816161 instance=ExtResource("3_gbqnl")]
+position = Vector2(1828, -1281)
+
+[node name="Tutorial room 3" parent="." unique_id=1005806351 instance=ExtResource("4_ckvwl")]
+position = Vector2(15, -1373)

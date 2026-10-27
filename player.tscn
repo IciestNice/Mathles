@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://10yigf5rrwpu"]
+
+[ext_resource type="Texture2D" uid="uid://bddc30jph13rj" path="res://assets/explorere.webp" id="2_g2els"]
+[ext_resource type="Script" uid="uid://ds58gyepxsr7r" path="res://scripts/player.mathls.gd" id="2_hqtel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(85, 78)
+
+[node name="Player" type="Node2D" unique_id=2067117308]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1372385552]
+script = ExtResource("2_hqtel")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=623654644]
+position = Vector2(31, -25.095999)
+scale = Vector2(0.331, 0.3039375)
+texture = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1157151291]
+position = Vector2(30.5, -25)
+shape = SubResource("RectangleShape2D_onrkg")

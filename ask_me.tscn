@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d0ah2ibnyotqi"]
+
+[ext_resource type="Script" uid="uid://cfykc75ktbfm2" path="res://scripts/ask_me level 1.gd" id="1_fpaph"]
+[ext_resource type="Texture2D" uid="uid://c3qikqaqpo6ei" path="res://assets/Screenshot_2026-10-16_at_22.39.18-removebg-preview.png" id="1_ipeyc"]
+[ext_resource type="Script" uid="uid://dwws6nwoxrf1l" path="res://scripts/question.gd" id="2_213ls"]
+[ext_resource type="Script" uid="uid://bx4ouq42lwrdh" path="res://scripts/answer.gd" id="3_213ls"]
+[ext_resource type="Texture2D" uid="uid://dl8vnwlaawgmn" path="res://assets/Screenshot_2026-10-20_at_20.35.28-removebg-preview.png" id="4_hol4y"]
+[ext_resource type="Script" uid="uid://di7yabp0np3lk" path="res://scripts/close_button.gd" id="5_n7ie1"]
+
+[node name="ask_me" type="Control" unique_id=405060066]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpaph")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=946496418]
+position = Vector2(558.00006, 302)
+scale = Vector2(1.1681887, 1.3842105)
+texture = ExtResource("1_ipeyc")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1869844309]
+layout_mode = 0
+offset_left = 349.99994
+offset_top = 126.0
+offset_right = 505.8394
+offset_bottom = 196.0
+scale = Vector2(2.74, 2.74)
+script = ExtResource("2_213ls")
+
+[node name="answer" type="LineEdit" parent="." unique_id=846281940]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 330.0
+offset_right = 426.53238
+offset_bottom = 362.3741
+scale = Vector2(5.23, 5.23)
+alignment = 1
+script = ExtResource("3_213ls")
+
+[node name="Button" type="Button" parent="." unique_id=885591867]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 138.0
+offset_right = 768.0
+offset_bottom = 633.0
+scale = Vector2(0.14, 0.14)
+icon = ExtResource("4_hol4y")
+script = ExtResource("5_n7ie1")
+
+[connection signal="text_submitted" from="answer" to="answer" method="_on_text_submitted"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
